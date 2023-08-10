@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,400;10..48,700&family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+:root {
+    --grey: #242424;
+    --green: #d6fd51;
+    --text: 1.6rem;
+    --font: 'Lato', sans-serif, 'Roboto';
+    --font-title: 'Bricolage Grotesque', 'Lato', sans-serif, 'Roboto';
+    --transition: all 0.3s linear;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font);
+    font-size: var(--text);
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+
+img, video, iframe {
+    width: 100%;
+}
+
+button {
+    font-size: 1.6rem;
+    font-family: var(--font-title);
+    padding: 0.5rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background-color: #d6fd51;
+    border-radius: 2rem;
+}
+
+button:hover {
+    background-color: #ccfc30;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 3rem;
+    max-width: 40rem;
+    font-style: italic;
+    font-family: var(--font-title);
+}
+
+h2 {
+    font-size: 2.7rem;
+    font-family: var(--font-title);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2rem;
+    font-family: var(--font-title);
+}
+
+header {
+    padding: 1rem;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#logo {
+    width: 9rem;
+    height: 100%;
+    margin: auto;
+}
+
+ul li {
+    list-style: none;
+    margin-left: -4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.5rem;
+}
+
+a.selected {
+    border-bottom: 2px solid var(--green);
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: var(--green);
+}
+
+#titulo {
+    background-image: linear-gradient(115deg, #000000d9, #000000d9), url("../imgs/background.jpg");
+    height: 40vh;
+    padding: 1rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#btn-start {
+    width: 15rem;
+    margin: auto;
+}
+
+#btn-start a {
+    text-decoration: none;
+    color: black;
+}
+
+#Planos {
+    padding: 1rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.plano {
+    margin-bottom: 3rem;
+    max-width: 25rem;
+    height: 32rem;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+#lista-planos:has(.plano:hover) .plano:not(:hover) { /*planos que não estão em hover*/
+    opacity: .6;
+    scale: .90;
+}
+
+.plano-img {
+    margin-bottom: 1rem;
+    width: 100%;
+    border-radius: 1.5rem;
+}
+
+.plano h4, p {
+    padding: 0.5rem;
+}
+
+.plano p {
+    margin-bottom: 0.5rem;
+}
+
+
+#area-cadastro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.536);
+    display: grid;
+    place-items: center;
+    align-items: center;
+    transition: var(--transition);
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1000;
+}
+
+#Cadastro {
+    border-radius: 1.5rem;
+    background-color: white;
+    color: black;
+    padding: 2rem;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    position: relative;
+    z-index: 1001;
+}
+
+
+#area-cadastro.open {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1000;
+}
+
+.input-box {
+    padding: 1rem;
+}
+
+label, #plano-cadastro {
+    font-size: 1.8rem;
+}
+
+input, select {
+    margin-top: 1rem;
+    width: 20rem;
+    font-family: var(--font);
+    font-size: 1.6rem;
+    padding: 0.2rem;
+    border: 1px solid black;
+}
+
+#btn-cadastro {
+    margin-top: 2rem;
+}
+
+#Contato {
+    margin-bottom: 5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+#Contato video {
+    border-radius: 1rem;
+    margin-bottom: 4rem;
+}
+
+#Localizacao {
+    margin-bottom: 5rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+iframe {
+    height: 20rem;
+    border-radius: 1rem;
+}
+
+footer {
+    background-color: var(--green);
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+footer a {
+    text-decoration: none;
+    color:#787777;
+}
+
+footer a:hover {
+    color: #454545;
+}
+
+@media screen and (min-width: 720px) and (max-width: 900px) {
+    header {
+        display: grid;
+        grid-template-columns: 15rem 1fr;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 4rem;
+        max-width: 60rem;
+    }
+
+    ul li {
+        display: inline-flex;
+        margin: 1rem;
+    }
+
+    video, iframe {
+        max-width: 40rem;
+    }
+
+    #logo {
+        margin: 0;
+    }
+
+
+    #lista-planos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .plano {
+        margin: 1rem;
+    }
+
+    #Contato {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #Contato video {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    header {
+        display: grid;
+        grid-template-columns: 20rem 1fr;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 4rem;
+        max-width: 60rem;
+    }
+
+    ul li {
+        display: inline-flex;
+        margin: 1rem;
+        list-style: none;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    video, iframe {
+        max-width: 40rem;
+    }
+
+    #logo {
+        margin: 0;
+    }
+
+
+    #lista-planos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 4rem;
+    }
+
+    .plano {
+        margin: 1rem;
+        max-width: 30rem;
+        height: 35rem;
+    }
+
+    input, select {
+        margin-top: 1rem;
+        width: 30rem;
+    }
+
+    #Contato {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Contato video {
+        margin-bottom: 0;
+        margin-right: 10rem;
+    }
+
+    iframe {
+        max-width: 60rem;
+        height: 30rem;
+    }
+}

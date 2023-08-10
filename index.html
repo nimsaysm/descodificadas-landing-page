@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Gym</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/png" href="assets/imgs/logo.png">
+</head>
+<body>
+    <header>
+        <img id="logo" src="assets/imgs/logo.png">
+        <nav id="nav-bar">
+            <ul>
+                <li>
+                    <a class="link" href="#Planos">Planos</a>
+                </li>
+                <li>
+                    <a class="link" id="link-cadastro" href="#Cadastro">Cadastre-se</a>
+                </li>
+                <li>
+                    <a class="link" href="#Contato">Contato</a>
+                </li>
+                <li>
+                    <a class="link" href="#Localizacao">Onde estamos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="titulo">
+        <h1>Venha treinar na melhor academia do Brasil</h1>
+        <button id="btn-start">
+            <a href="#Planos">Comece agora</a>
+        </button>    
+    </section>
+
+    <section id="Planos">
+        <h2>Nossos planos</h2>
+        <div id="lista-planos">
+            <div class="plano">
+                <img src="assets/imgs/plano-basico.jpg" class="plano-img">
+                <h3 class="nome-plano">Básico</h3>
+                <h4 class="plano-valor">R$90,00/mês</h4>
+                <p class="plano-info">Sem fidelidade, acesso ao aeróbico</p>
+                <button class="plano-assinar" id="basico">Assinar</button>
+            </div>
+            <div class="plano">
+                <img src="assets/imgs/plano-anual.png" class="plano-img">
+                <h3 class="nome-plano">Anual</h3>
+                <h4 class="plano-valor">R$70,00/mês</h4>
+                <p class="plano-info">Fidelidade de 12 meses, acesso ao aeróbico e crossfit</p>
+                <button class="plano-assinar" id="anual">Assinar</button>
+            </div>
+            <div class="plano">
+                <img src="assets/imgs/plano-simples.png" class="plano-img">
+                <h3 class="nome-plano">Simples</h3>
+                <h4 class="plano-valor">R$60,00/mês</h4>
+                <p class="plano-info">Sem fidelidade</p> <br/>
+                <button class="plano-assinar" id="simples">Assinar</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="area-cadastro">
+        <div id="Cadastro">
+            <fieldset>
+                <h2>Cadastro</h2>
+                <div>
+                    <div class="input-box">
+                        <label for="nome">
+                            Nome <br/>
+                            <input type="text" name="nome" placeholder="Digite seu nome" required minlength="3" maxlenght="80" required />
+                        </label>
+                    </div>
+                    <div class="input-box">
+                        <label for="email"> 
+                            E-mail <br/>
+                            <input type="email" name="email" pattern="(^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$)" title="endereço de email" placeholder="E-mail" required />
+                        </label>
+                    </div>
+                    <div id="plano-cadastro">
+                        <p>
+                            Plano escolhido
+                        </p>
+                        <select id="dropdown" name="plano" required>
+                            <option disabled="" selected="" value="">Selecione o plano escolhido</option>
+                            <option value="basico">Básico</option>
+                            <option value="anual">Anual</option>
+                            <option value="simples">Simples</option>
+                        </select>
+                    </div>
+    
+                    <button type="submit" id="btn-cadastro">Cadastrar</button>
+                </div>
+            </fieldset>
+        </div>
+    </section>
+
+    <section id="Contato">
+        <video src="assets/imgs/video.mp4" autoplay muted loop></video>
+        <div>
+            <h2>Contato</h2>
+            <h3>Telefones:</h3>
+            <p>(11)98888-7777</p>
+            <p>(11)97777-8888</p>
+        </div>
+    </section>
+
+    <section id="Localizacao">
+        <h2>Onde estamos</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.047030918138!2d-46.46856330000001!3d-23.566754300000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce67bfdeff6b11%3A0x3d9529fbdbfb0c7!2sEvoque%20Academia%20Parque%20do%20Carmo%3A%20Pilates%2C%20Muay%20thai%2C%20Jiu%20jitsu%2C%20Arte%20Marcial%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1691612656284!5m2!1spt-BR!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    
+    <footer>
+        <p>Desenvolvido por
+            <a href="https://www.linkedin.com/in/yasmin-soraya/">Yasmin Soraya</a>
+        </p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
